@@ -71,5 +71,5 @@ class LRUCache(BaseCaching):
                 if len(self.cache_data) >= self.MAX_ITEMS:
                     first = next(iter(self.cache_data))
                     self.cache_data.pop(first)
-                    print(f"DISCARD: {first[0]}")
+                    print(f"DISCARD: {first}")
             self.cache_data[key] = item

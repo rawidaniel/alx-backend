@@ -3,7 +3,6 @@
 Module 1-fifo_cache
 """
 from base_caching import BaseCaching
-import time
 
 
 class FIFOCache(BaseCaching):

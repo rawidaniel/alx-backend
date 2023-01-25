@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Module 2-lifo_cache
+Module 4-mru_cache.py
 """
 from base_caching import BaseCaching
 from collections import OrderedDict
 
 
-class LRUCache(BaseCaching):
+class MRUCache(BaseCaching):
     """
-    A class used to represent LIFOCache
+    A class used to represent MRUCache
 
     Arguments
     ---------
@@ -53,7 +53,7 @@ class LRUCache(BaseCaching):
 
     def put(self, key, item):
         """
-        Add an item in the cache using LRUCache eviction techniques
+        Add an item in the cache using MRUCache eviction techniques
 
         Parameters
         ----------
@@ -69,7 +69,6 @@ class LRUCache(BaseCaching):
                 self.cache_data.pop(key)
             except KeyError:
                 if len(self.cache_data) >= self.MAX_ITEMS:
-                    first = next(iter(self.cache_data))
-                    self.cache_data.pop(first)
-                    print(f"DISCARD: {first[0]}")
+                    last = self.cache_data.popitem()
+                    print(f"DISCARD: {last[0]}")
             self.cache_data[key] = item

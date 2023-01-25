@@ -22,6 +22,10 @@ class BasicCache(BaseCaching):
     get(key)
         Get an item by key
     """
+    def __init__(self):
+        """ Initialize the class using the parent class __int__ method"""
+        super().__init__()
+
     def put(self, key, item):
         """
         Add an item in the cache

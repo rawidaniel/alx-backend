@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module 4-mru_cache.py
+Module 4-mru_cache
 """
 from base_caching import BaseCaching
 from collections import OrderedDict

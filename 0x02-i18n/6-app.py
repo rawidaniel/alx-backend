@@ -67,7 +67,7 @@ def get_locale():
 def index() -> str:
     """Display Hello World message
     """
-    return render_template("5-index.html")
+    return render_template("6-index.html")
 
 
 if __name__ == "__main__":

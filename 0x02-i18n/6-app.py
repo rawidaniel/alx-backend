@@ -54,11 +54,12 @@ def get_locale():
     """select a language translation to use for the request
     """
     loc = request.args.get("locale")
-    loc_user = g.user.get('locale', None)
     if loc in app.config['LANGUAGES']:
         return loc
-    elif g.user and loc_user in app.config['LANGUAGES']:
-        return loc_user
+    if g.user:
+        loc_user = g.user.get('locale')
+        if loc_user and loc_user in app.config['LANGUAGES']:
+            return loc_user 
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 

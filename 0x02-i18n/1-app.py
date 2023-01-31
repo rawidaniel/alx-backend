@@ -4,7 +4,7 @@ Module 1-app
 Set up basic Flask application
 """
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 from flask_babel import Babel
 
 
@@ -23,7 +23,7 @@ babel = Babel(app)
 
 
 @app.route("/")
-def index():
+def index() -> str:
     """Display Hello World message
     """
     return render_template("1-index.html")

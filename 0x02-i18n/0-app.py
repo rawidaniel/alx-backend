@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def index():
+def index() -> str:
     """Display Hello World message
     """
     return render_template("0-index.html")

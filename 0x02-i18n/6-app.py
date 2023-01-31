@@ -59,7 +59,7 @@ def get_locale():
     if g.user:
         loc_user = g.user.get('locale')
         if loc_user and loc_user in app.config['LANGUAGES']:
-            return loc_user 
+            return loc_user
     loc = request.headers.get('locale', None)
     if loc in app.config['LANGUAGES']:
         return loc

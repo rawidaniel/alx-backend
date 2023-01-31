@@ -22,7 +22,7 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@babel.babel.localeselector
+@babel.localeselector
 def get_locale():
     """select a language translation to use for the request
     """
@@ -33,7 +33,7 @@ def get_locale():
 def index():
     """Display Hello World message
     """
-    return render_template("0-index.html")
+    return render_template("2-index.html")
 
 
 if __name__ == "__main__":
